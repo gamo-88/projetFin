@@ -1,0 +1,420 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+nav .nav-logo-image{
+    height: 55px;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+#marque-logo{
+    font-size: 35px;
+    font-weight: bolder;
+}
+nav .nav-cart{
+height: 60px;
+display: flex;
+align-items: end;
+justify-content: center;
+position: relative;
+cursor: pointer;
+}
+nav #cart-number-item{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(253, 6, 6, 0.736);
+    padding: 2px;
+    border-radius: 50%;
+}
+.navbar-toggler-icon , .theOne{
+    font-size: 30px;
+    font-weight:1900;
+    color: black;
+}
+.two li{
+    transition: all .8s ease-in-out;
+}
+.two li:hover{
+ transform: translateX(8px);
+}
+
+.active{
+    background-color: rgba(145, 143, 143, 0.848);
+    border-radius: 8px;
+    color: white;
+}
+
+nav li:hover{
+    background-color: rgba(145, 143, 143, 0.848);
+    border-radius: 8px;
+    color: #fff;   
+}
+
+/* ******** partie CAROUSSELL********  */
+
+
+.carousel-item >img{
+    max-height: 500px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+/* la div qui porte le titre en h5, le paragraphe du nom de la tchop, et le bouton ' passe ta commande' */
+.carousel-caption{
+    bottom: 80px;
+}
+/* le titre qui comporte le text 'nos plats speciaux' */
+.carousel-caption h5{
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 25px;
+}
+
+/* le first para portant le nom de la tchop */
+.carousel-caption >p{
+    font-weight: bold;
+    width: 60%;
+    margin: auto;
+    font-size: 25px;
+    line-height: 1.9;
+}
+
+             /* *******FIN CAROUSSELL****** */
+
+
+
+        /* *********PARTIE DESIGN DE LA CARTES DES PLATS POPULAIRE********* */
+
+        .range_plats{
+            background-color: rgba(73, 73, 73, 0.056);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* structure de la carte elle mm */
+
+.carte-plats{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    background-color: aliceblue;
+    margin-left: 10px;
+    transition: all 2s ease-in-out;
+}
+.carte-plats:hover{
+    box-shadow: 0px 0px 14px 0px black;
+    transform: scale(1.007);
+
+}
+
+/* image de la carte */
+
+.carte-plats img{
+    width: 100%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+
+}
+
+
+.carte-corps{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+.carte-plats .nom-carte{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.carte-plats .carte-corps .text-carte{
+    font-size: 25px;
+}
+
+.carte-plats .carte-corps .prixBoutton-carte{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.carte-plats .carte-corps .prixBoutton-carte .prix-carte{
+    color: brown;
+    font-size: 25px;
+}
+
+.carte-corps .prixBoutton-carte .boutton-carte button{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    font-size: larger;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+       /* FIN PARTIE PLAT... */
+
+
+       /* PARTIE POURQUOI NOUS CHOISIR */
+
+.accordion-header{
+    color: white;
+
+}
+
+
+       .accordion-item  button{
+        background-color: brown;
+        color: white;
+        margin-bottom: 10px;
+        border: 2px solid gray;
+        border-radius: 8px;
+       }
+
+       .accordion-item  button:focus{
+        background-color: brown;
+
+       }
+       .accordion-body{
+        background-color: brown;
+
+       }
+
+       .image-pourquoi >img{
+        border-radius: 50%;
+       }
+
+
+
+   /* PASSER LA COMMANDE */
+
+   .messageEnregistrement{
+    color: green;
+    font-size: 18px;
+    background-color: rgba(0, 128, 0, 0.216);
+    border: 1px solid green;
+    border-radius: 8px;
+    padding-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+   }
+   #nomClient{
+    text-transform: uppercase;
+
+   }
+.messageEnregistrementOpener{
+    display: block;
+}
+
+
+
+
+   .nav-cart-bas{
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+display: flex;
+align-items: end;
+justify-content: end;
+position: relative;
+cursor: pointer;
+display: none;
+z-index: 10;
+   }
+   #cart-number-item-bas{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(253, 6, 6, 0.736);
+    padding: 2px;
+    border-radius: 50%;
+   }
+
+
+
+            /* LA CARTE CONTENANT LES COMMANDES */
+
+.carte{
+    min-height: 150px;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    background-color: #fff;
+    transform: translateX(-50%) scale(0);
+    display: none;
+    max-width:80%;
+    width: 500px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    z-index: 2;
+    transition: all .9S ease-in-out;
+
+}
+.carte-tete{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    padding-top: 0;
+    align-items: center;
+    border-bottom: 1px solid rgb(73, 73, 73);
+}
+.carte-tete >p{
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.carte #nombreCommande{
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.703);
+    margin-top: 10px;
+}
+.actif{
+display: block;
+}
+
+#fermeurCarte{
+    background-color: #fff;
+    border: none;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.663);
+    padding: none;
+
+}
+#overlayIndex{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    opacity: 0;
+    transition: all .7S ease-in-out;
+
+}
+
+#overlayIndex.activer{
+opacity: 1;
+pointer-events: all;
+}
+
+
+/* GESTION DU FORMULAIRE EN BAS */
+
+.form-controler{
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    outline: none;
+    position: relative;
+}
+
+.soumettre{
+    background-color: rgb(2, 153, 2);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+}
+.exclamation{
+    display: none;
+}
+input .exclamation .fa{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.inputError{
+    box-shadow: 2px 2px 2px 2px red;
+}
+
+.feedbackState{
+    color: red;
+    font-size: 13px;
+}
+
+.ecartIndex{
+    width: 100%;
+    height: 60px;
+    display: none;
+}
+
+.offcanvas, .theOne{
+    display: none;
+}
+
+
+
+
+@media (max-width :996px) {
+    nav #cart-number-item{
+        position: absolute;
+        top: 0;
+        right: calc(50% - 35px);
+    }
+    .image-pourquoi img{
+        display: none;
+    }
+    .ecartIndex{
+        display: block;
+    }
+    
+}
+
+@media (max-width :500px){
+     .nav-cart-bas{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: aliceblue;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+     #cart-number-item-bas{
+        position: absolute;
+        right: 0;
+    }
+    .image-pourquoi img{
+        display: none;
+    }
+
+}
+
+@media (max-width :1000px){
+    .offcanvas, .theOne{
+        display: block;
+    }
+}
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pouletDg.css">
+
+    <title>Poulet Dg</title>
+    <title>Document</title>
+</head>
+<body class="bg-tertiary position-relative">
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex align-item-center  fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img class="nav-logo-image" src="image/logo.png" alt="logo du site"><span id="marque-logo">CamerResto.</span></a>
+      <button class="btn btn-light theOne" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-item-center one">
+          <li class="nav-item nor me-5 fs-5 ">
+            <a class="nav-link " aria-current="page" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item nor me-5 fs-5">
+            <a class="nav-link" href="index.html">Plats</a>
+          </li>
+          <li class="nav-item nor me-5 fs-5">
+            <a class="nav-link" href="index.html">Pourquoi</a>
+          </li>
+          <li class="nav-item nor me-5 fs-5">
+            <a class="nav-link" href="index.html">Menus</a>
+          </li>
+          <li class="nav-item nor me-5 fs-5 active">
+            <a class="nav-link" href="#">Commandes</a>
+          </li>
+          <li class="nav-item nor me-5 fs-5">
+            <a class="nav-link" href="index.html">About</a>
+          </li>
+         
+        </ul>
+
+      </div>
+    </div>
+
+
+              <!-- OFFCANVAS -->
+
+
+              
+              <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+              </button> -->
+              
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <button type="button" class="btn-close text-reset ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body  ">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 two align-item-center">
+                    <li class="nav-item resp me-5 fs-5">
+                      <a class="nav-link " aria-current="page" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item resp  me-5 fs-5">
+                      <a class="nav-link" href="index.html">Plats</a>
+                    </li>
+                    <li class="nav-item resp me-5 fs-5">
+                      <a class="nav-link" href="index.html">Pourquoi</a>
+                    </li>
+                    <li class="nav-item resp me-5 fs-5">
+                      <a class="nav-link" href="index.html">Menus</a>
+                    </li>
+                    <li class="nav-item resp me-5 fs-5 active">
+                      <a class="nav-link" href="#">Commandes</a>
+                    </li>
+                    <li class="nav-item resp me-5 fs-5">
+                      <a class="nav-link" href="index.html">About</a>
+                    </li>
+                   
+                  </ul>
+
+                </div>
+              </div>
+
+
+
+
+
+  </nav>
+    
+
+
+
+<div class="contenus">
+    
+<div class="imagePoulet">
+<img src="image/Pouletdg.jpg" alt="poulet Dg">
+</div>
+
+<div class="infos">
+
+    <div class="nomPlat">
+        <p><strong>POULET DG</strong></p>
+
+</div>
+<div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
+    <i class="fa-solid fa-star" style="color: brown;"></i>
+    <i class="fa-solid fa-star" style="color: brown;"></i>
+    <i class="fa-solid fa-star" style="color: brown;"></i>
+    <i class="fa-solid fa-star" style="color: brown;"></i>
+</div>
+
+<div class="prixBarer">
+<p>10000 FCFA <span class="line-through">20000 FCFA</span> <span id="backRed">promo</span><br>
+    Vous economisez <strong>10000 FCFA</strong>
+</p>
+</div>
+
+<div class="infosLivraison">
+    <i class="fa-solid fa-truck-fast"></i> Livraison Gratuite sous 1H <br>
+    <i class="fa-solid fa-rotate"></i> Retour gratuit sous 30jours <br>
+    <i class="fa-solid fa-dollar-sign"></i> Paiement a la livraison <br>
+
+</div>
+
+<div class="prixQuantite">
+  <strong>  Quantite </strong><br>
+
+    <input type="number" name="quantite" value="1" id="quantite">
+    <p>
+        <strong>
+            TOTAL: <span class="montant">10000</span>
+        </strong>FCFA
+    </p>
+
+</div>
+
+
+<div class="payerMaintenan">
+    <button type="submit" id="paie">Payer Maintenant</button>
+</div>
+
+</div>
+
+</div>   
+
+<div class="payerMaintenant">
+
+<div class="titre-payerMaintenant">
+  <p>  Detail sur la carte <p>
+    <button id="fermerPayement">&times;</button>
+</div>
+
+<div class="payementInfos">
+
+    <p>VOUS ALLEZ PAYER AU TOTAL : <strong><span class="montan">10000</span></strong> FCFA</p>
+
+
+    <div class="lesInputs">
+        <div class="nomAdresse">
+            <input type="text"  class="infoPaiement" onkeyup="checkit()" id="inputName" placeholder="Entrez votre nom...">
+            <input type="text"  class="infoPaiement" onkeyup="checkit()" id="inputAdresse" placeholder="Entrez votre adresse...">
+       </div>
+        <div class="telMoyen">
+            <input type="text"  class="infoPaiement" onkeyup="checkit()" id="inputPhone" placeholder="Entrez votre numero de telephone...">
+            <select name="" id="moyenPayement" onchange="checkit()">
+                <option value="Mode de paiement">Mode de paiement</option>
+                <option value="Orange money">Orange money</option>
+                <option value="Mtn Mobile Money">Mtn Mobile Money</option>
+                <option value="Express Union Mobile Money">Express Union Mobile Money</option>
+
+            </select>
+    </div>
+    <button type="submit" id="payer" disabled >Payer</button>
+    </div>
+    
+</div>
+
+
+
+
+</div>
+
+      
+
+
+
+    
+
+          <!-- LE CHARIOT DU BAS -->
+
+
+
+
+
+
+            <!-- LA CARTE CONTENANT LE NOMBRE DE DE MENUS CHOISIS -->
+    
+            <section class="carte">
+<section class="carte-tete">
+  <p>Le nombre de commandes dans la plateforme </p>
+  <p><span id="fermeurCarte">X</span></p>
+</section>
+
+<p id="nombreCommande">Aucune commande pour l'instant</p>
+
+            </section>
+
+
+
+<!-- /LA DIV CI EST POUR LE SMS DE REMERCIEMENT QUI DIT "MERCI ... ''-->
+
+
+
+            <div class="remerciement">
+              <div class="enteteRemerciement"> 
+            
+                <button id="fermerRemerciement">&times; </button>
+              </div>
+              <div class="corpsRemerciement">
+                MERCI D'AVOIR PASSER LA COMMANDE SUR CAMERRESTO!!!
+              </div>
+            </div>
+
+<div class="ecartPouletDg"></div>
+
+            <!-- LE FOOTER -->
+            <div class="container-fluid text-light p-3 foot">
+              <div class="row d-flex bg-dark">
+                  <div class="col-6">copyright  &copy; 2024 AGORA TECH CENTER</div>
+                  <div class="col-6 d-flex justify-content-end align-item-center ">
+                      
+                      <i class="fa-brands fa-facebook ms-1"></i>
+                      <i class="fa-brands fa-twitter ms-1"></i>
+                      <i class="fa-brands fa-youtube ms-1"></i>
+                  </div>
+              
+              </div>
+      
+          </div>
+
+
+            <div id="overlayPouletDg" class=""></div>
+
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/index.js"></script>
+<script src="./js/pouletDg.js"></script>
+</body>
+</html>

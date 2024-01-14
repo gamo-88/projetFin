@@ -1,0 +1,223 @@
+
+.row img{
+    margin-top: 2rem;
+    width: 20rem;    
+object-fit: cover;
+}
+
+.contenus{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.imagePoulet img{
+    width: 30rem;
+    border-radius: 8px;
+}
+.nomPlat{
+    font-size: 25px;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+#backRed{
+    background-color: red;
+    color: white;
+}
+.prixQuantite{
+    margin-top: 20px;
+}
+#quantite{
+    margin-top: 10px;
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.payerMaintenan button{
+    border-radius: 8px;
+    border: none;
+    background-color: gray;
+    color: white;
+    padding: 5px;
+}
+
+.payerMaintenant{
+background-color: #fff;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 8px;
+transform: scale(0);
+z-index: 2;
+transition: all .9S ease-in-out;
+
+
+}
+
+.titre-payerMaintenant{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px;
+padding-bottom: none;
+border-bottom: 1px solid rgb(98, 98, 94);
+}
+.titre-payerMaintenant p{
+    font-size: 25px;
+margin-bottom: none;
+font-weight: bold;
+
+
+}
+.payementInfos{
+    padding: 8px;
+}
+
+.payementInfos >p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.nomAdresse{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.telMoyen{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+
+}
+
+.payementInfos input{
+    border-radius: 8px;
+    outline: none;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.lesInputs button{
+    width: 100%;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    
+}
+
+#moyenPayement{
+    border-radius: 8px;
+    outline: none;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.titre-payerMaintenant #fermerPayement{
+    background-color: #fff;
+    border: none;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.663);
+    padding: none;
+    margin-bottom: none;
+}
+button:disabled{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.ecartPouletDg{
+    width: 100%;
+    height: 70px;
+}
+
+
+
+
+
+
+.remerciement{
+    width: 450px;
+    max-width: 80%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    position: fixed;
+    border-radius: 8px;
+    background-color: #fff;
+    z-index: 3;
+    transition: all .2S ease-in-out;
+
+}
+.enteteRemerciement{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    border-bottom: 1px solid rgb(98, 98, 94);
+}
+#fermerRemerciement{
+    background-color: #fff;
+    border: none;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.663);
+    padding: none;
+}
+.corpsRemerciement{
+    padding: 18px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.actifPouletDg{
+    transform: translate(-50%, -50%) scale(1);
+    }
+
+#overlayPouletDg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    opacity: 0;
+    transition: all .7S ease-in-out;
+
+}
+
+.foot{
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+#overlayPouletDg.activer{
+opacity: 1;
+pointer-events: all;
+}
+
+@media (max-width :500px){
+    .contenus img{
+        max-width: 70%;
+        margin: 20px 50%;
+        transform: translateX(-50%);
+    }
+    .foot{
+        position: absolute;
+    }
+} 
