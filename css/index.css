@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: 0;
 }
-
+body{
+    display: flex;
+    flex-direction: column;
+}
 nav .nav-logo-image{
     height: 55px;
 }
@@ -65,7 +68,8 @@ nav li:hover{
 
 
 .carousel-item >img{
-    max-height: 500px;
+    height: 650px;
+    max-height: 70vh;
     object-fit: cover;
     filter: brightness(0.5);
 }
@@ -418,3 +422,14 @@ input .exclamation .fa{
     }
 }
 
+
+@media(max-width : 350px){
+    nav .nav-logo-image{
+        height: 55px;
+    }
+
+    #marque-logo{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+}
