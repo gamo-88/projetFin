@@ -92,6 +92,8 @@ let fermerRemerciement = document.querySelector('#fermerRemerciement')
 let allInfoPaiement = document.querySelectorAll('.infoPaiement')
 
 
+        // OUVERTURE DE LA MODALE DE REMERCIEMENT
+
 payer.addEventListener('click', function(){
     cartePayement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
@@ -102,6 +104,9 @@ payer.addEventListener('click', function(){
 
 
 })
+
+
+        // OUVERTURE DE LA MODALE DE REMERCIEMENT
 
 
 fermerRemerciement.addEventListener('click', function(){

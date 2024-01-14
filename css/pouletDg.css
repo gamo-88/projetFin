@@ -221,7 +221,5 @@ pointer-events: all;
         margin: 20px 50%;
         transform: translateX(-50%);
     }
-    .foot{
-        position: absolute;
-    }
+
 } 
