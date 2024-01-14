@@ -48,10 +48,11 @@ object-fit: cover;
 }
 
 .payerMaintenant{
+    max-width: 80vw;
 background-color: #fff;
 position: fixed;
-top: 38%;
-left: 40%;
+top: 40%;
+left: 50%;
 transform: translate(-50%, -50%);
 border-radius: 8px;
 display: none;
@@ -149,9 +150,9 @@ button:disabled{
 
 .remerciement{
     width: 450px;
-    max-width: 80%;
-    top: 40%;
-    left: 40%;
+    max-width: 80vw;
+    top: 45%;
+    left: 50%;
     display: none;
     transform: translate(-50%, -50%);
     position: fixed;
