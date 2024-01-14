@@ -411,7 +411,18 @@ input .exclamation .fa{
 
 }
 
-@media (max-width :996px) {
+@media (max-width: 450px){
+    nav .nav-logo-image{
+        height: 45px;
+    }
+
+    #marque-logo{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
+
+@media (max-width: 996px) {
     nav #cart-number-item{
         position: absolute;
         top: 0;
