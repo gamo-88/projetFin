@@ -22,10 +22,12 @@ let fermerPayement = document.querySelector('#fermerPayement')
 let buttonPaie = document.querySelector('#paie')
 let overlayPouletDg =document.querySelector('#overlayPouletDg')
 
-
+// transform: translateX(-50%)
 buttonPaie.addEventListener('click', function(){
     cartePayement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
+    cartePayement.style.transform = 'translateX(-50%)'
+
 allInput.forEach(function(input){
     input.value = ""
 } )
@@ -43,6 +45,7 @@ if(mode.value ='Mode de paiement'){
 fermerPayement.addEventListener('click', function(){
     cartePayement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
+    cartePayement.style.transform = 'translateX(50%)'
 
     allInput.forEach(function(input){
         input.value = ""
@@ -94,6 +97,8 @@ let allInfoPaiement = document.querySelectorAll('.infoPaiement')
 payer.addEventListener('click', function(){
     cartePayement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
+    cartePayement.style.transform = 'translateX(-50%)'
+
 
     modaleRemerciement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
@@ -104,6 +109,7 @@ payer.addEventListener('click', function(){
 
 fermerRemerciement.addEventListener('click', function(){
     modaleRemerciement.classList.toggle('actifPouletDg')
+    cartePayement.style.transform = 'translateX(50%)'
     
     overlayPouletDg.classList.toggle('activer')
     
