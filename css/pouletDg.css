@@ -51,7 +51,7 @@ object-fit: cover;
 background-color: #fff;
 position: fixed;
 top: 38%;
-left: 50%;
+left: 40%;
 transform: translate(-50%, -50%);
 border-radius: 8px;
 display: none;
@@ -151,7 +151,7 @@ button:disabled{
     width: 450px;
     max-width: 80%;
     top: 40%;
-    left: 50%;
+    left: 40%;
     display: none;
     transform: translate(-50%, -50%);
     position: fixed;

@@ -97,7 +97,7 @@ let allInfoPaiement = document.querySelectorAll('.infoPaiement')
 payer.addEventListener('click', function(){
     cartePayement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
-    cartePayement.style.transform = 'translateX(-50%)'
+    modaleRemerciement.style.transform = 'translateX(-50%)'
 
 
     modaleRemerciement.classList.toggle('actifPouletDg')
@@ -109,7 +109,7 @@ payer.addEventListener('click', function(){
 
 fermerRemerciement.addEventListener('click', function(){
     modaleRemerciement.classList.toggle('actifPouletDg')
-    cartePayement.style.transform = 'translateX(50%)'
+    modaleRemerciement.style.transform = 'translateX(50%)'
     
     overlayPouletDg.classList.toggle('activer')
     
