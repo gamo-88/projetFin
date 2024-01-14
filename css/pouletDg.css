@@ -54,7 +54,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 border-radius: 8px;
-transform: scale(0);
+display: none;
 z-index: 2;
 transition: all .9S ease-in-out;
 
@@ -150,9 +150,10 @@ button:disabled{
 .remerciement{
     width: 450px;
     max-width: 80%;
-    top: 5%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    display: none;
+    transform: translate(-50%, -50%);
     position: fixed;
     border-radius: 8px;
     background-color: #fff;
@@ -182,7 +183,7 @@ button:disabled{
 }
 
 .actifPouletDg{
-    transform: translate(-50%, -50%) scale(1);
+display: block;
     }
 
 #overlayPouletDg{

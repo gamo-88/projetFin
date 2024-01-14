@@ -21,10 +21,18 @@ let cartePayement = document.querySelector('.payerMaintenant')
 let fermerPayement = document.querySelector('#fermerPayement')
 let buttonPaie = document.querySelector('#paie')
 let overlayPouletDg =document.querySelector('#overlayPouletDg')
+
+
 buttonPaie.addEventListener('click', function(){
     cartePayement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
+allInput.forEach(function(input){
+    input.value = ""
+} )
 
+if(mode.value ='Mode de paiement'){
+    payer.disabled = true
+}
 
 })
 
@@ -35,6 +43,12 @@ buttonPaie.addEventListener('click', function(){
 fermerPayement.addEventListener('click', function(){
     cartePayement.classList.toggle('actifPouletDg')
     overlayPouletDg.classList.toggle('activer')
+
+    allInput.forEach(function(input){
+        input.value = ""
+    } )
+    mode.value ='Mode de paiement'
+
 })
 
 
@@ -74,7 +88,7 @@ m = false
 // AFFICHER LA CONSOLE COMPORTANT LES INFOS DU PAYEMENT ET LE MODE CHOISI
 let modaleRemerciement = document.querySelector('.remerciement')
 let fermerRemerciement = document.querySelector('#fermerRemerciement')
-
+let allInfoPaiement = document.querySelectorAll('.infoPaiement')
 
 
 payer.addEventListener('click', function(){
@@ -82,7 +96,6 @@ payer.addEventListener('click', function(){
     overlayPouletDg.classList.toggle('activer')
 
     modaleRemerciement.classList.toggle('actifPouletDg')
-    modaleRemerciement.style.top = '50%'
     overlayPouletDg.classList.toggle('activer')
 
 
@@ -91,7 +104,6 @@ payer.addEventListener('click', function(){
 
 fermerRemerciement.addEventListener('click', function(){
     modaleRemerciement.classList.toggle('actifPouletDg')
-    modaleRemerciement.style.display = 'none'
     
     overlayPouletDg.classList.toggle('activer')
     
