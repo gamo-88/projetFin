@@ -110,3 +110,7 @@ fermerRemerciement.addEventListener('click', function(){
     overlayPouletDg.classList.toggle('activer')
     
 })
+
+
+// MODALE BOOSTRAP
+

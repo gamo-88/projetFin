@@ -1,4 +1,6 @@
-
+body{
+    position: relative;
+}
 .row img{
     margin-top: 2rem;
     width: 20rem;    
