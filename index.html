@@ -1,934 +1,1083 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="image/logo.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <title>K_MeResto</title>
-</head>
-<body class="bg-tertiary">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="image/logo.png" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/all.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<title>K_MeResto</title>
+	</head>
+	<body class="bg-tertiary">
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light d-flex align-item-center fixed-top"
+		>
+			<div class="container-fluid">
+				<a class="navbar-brand" aria-label="logo-link" href="#"
+					><img
+						class="nav-logo-image"
+						src="image/logo.png"
+						alt="logo du site"
+					/><span id="marque-logo">CamerResto.</span></a
+				>
+				<button
+					class="btn btn-light theOne"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasExample"
+					aria-controls="offcanvasExample"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-item-center one">
+						<li class="nav-item nor me-5 fs-5 active">
+							<a
+								class="nav-link"
+								aria-label="link-to-home"
+								aria-current="page"
+								href="#"
+								>Accueil</a
+							>
+						</li>
+						<li class="nav-item nor me-5 fs-5">
+							<a class="nav-link" aria-label="link-to-plates" href="#plats"
+								>Plats</a
+							>
+						</li>
+						<li class="nav-item nor me-5 fs-5">
+							<a class="nav-link" aria-label="link-to-why" href="#pourquoi"
+								>Pourquoi</a
+							>
+						</li>
+						<li class="nav-item nor me-5 fs-5">
+							<a class="nav-link" aria-label="link-to-menus" href="#menus"
+								>Menus</a
+							>
+						</li>
+						<li class="nav-item nor me-5 fs-5">
+							<a
+								class="nav-link"
+								aria-label="link-to-recommendations"
+								href="#commandes"
+								>Commandes</a
+							>
+						</li>
+						<li class="nav-item nor me-5 fs-5">
+							<a class="nav-link" aria-label="link-to-about" href="#about"
+								>About</a
+							>
+						</li>
+					</ul>
+					<div class="nav-cart me-3">
+						<i
+							class="fa-solid fa-cart-plus"
+							style="height: 40px; color: rgb(114, 113, 113)"
+						></i>
+						<span id="cart-number-item">0</span>
+					</div>
+				</div>
+			</div>
 
+			<!-- OFFCANVAS -->
 
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex align-item-center  fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="nav-logo-image" src="image/logo.png" alt="logo du site"><span id="marque-logo">CamerResto.</span></a>
-      <button class="btn btn-light theOne" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-item-center one">
-          <li class="nav-item nor me-5 fs-5 active">
-            <a class="nav-link " aria-current="page" href="#">Accueil</a>
-          </li>
-          <li class="nav-item nor me-5 fs-5">
-            <a class="nav-link" href="#plats">Plats</a>
-          </li>
-          <li class="nav-item nor me-5 fs-5">
-            <a class="nav-link" href="#pourquoi">Pourquoi</a>
-          </li>
-          <li class="nav-item nor me-5 fs-5">
-            <a class="nav-link" href="#menus">Menus</a>
-          </li>
-          <li class="nav-item nor me-5 fs-5">
-            <a class="nav-link" href="#commandes">Commandes</a>
-          </li>
-          <li class="nav-item nor me-5 fs-5">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-         
-        </ul>
-        <div class="nav-cart me-3">
-            <i class="fa-solid fa-cart-plus" style="height: 40px; color: rgb(114, 113, 113);"></i>
-            <span id="cart-number-item">0</span>
-          </div>
-      </div>
-    </div>
-
-
-              <!-- OFFCANVAS -->
-
-
-              
-              <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+			<!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 Button with data-bs-target
               </button> -->
-              
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                  <button type="button" class="btn-close text-reset ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 two align-item-center">
-                    <li class="nav-item resp me-5 fs-5 active">
-                      <a class="nav-link " aria-current="page" href="#">Accueil</a>
-                    </li>
-                    <li class="nav-item resp  me-5 fs-5">
-                      <a class="nav-link" href="#plats">Plats</a>
-                    </li>
-                    <li class="nav-item resp me-5 fs-5">
-                      <a class="nav-link" href="#pourquoi">Pourquoi</a>
-                    </li>
-                    <li class="nav-item resp me-5 fs-5">
-                      <a class="nav-link" href="#menus">Menus</a>
-                    </li>
-                    <li class="nav-item resp me-5 fs-5">
-                      <a class="nav-link" href="#commandes">Commandes</a>
-                    </li>
-                    <li class="nav-item resp me-5 fs-5">
-                      <a class="nav-link" href="#about">About</a>
-                    </li>
-                   
-                  </ul>
-
-                </div>
-              </div>
-
-
-
-
-
-  </nav>
-
-
-      <!-- CARROUSSELLE -->
-
-
-      <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="image/poulet.jpg"  class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Nos Plats Speciaux</h5>
-              <p>POULET & FRITES</p>
-              <p>
-                <a href="#" class="btn btn-success mt-3">Commande Maintenant</a></p>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="image/pizza.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Nos Plats Speciaux</h5>
-              <p>PIZZA CHAUDE</p>
-              <p>
-                <a href="#" class="btn btn-success mt-3">Commande Maintenant</a></p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="image/nouille.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Nos Plats Speciaux</h5>
-              <p>NOUILLES EPICEES    
-            </p>
-            <p>
-                <a href="#" class="btn btn-success mt-3">Commande Maintenant</a></p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
 
-      <!-- LES PLATS SOUS CARTES ET COMMANDABLE -->
-
-      <div class="container">
-<div class="row">
-
-    <div class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5">
-        <p class="h1" id="plats">  PLATS POPULAIRES</p>
-    </div>
-
-</div>
-
-<div class="row gx-3 gy-3 range_plats shadow-lg ">
-
-<div class="col-md-6 col-sm-12 col-lg-4 ">
-
-    <div class="carte-plats">
-
-             <div class="carte-image"><img src="image/pouletpane.jpg" alt="image du poulet pané "></div>
-
-
-            <div class="carte-corps">
-
-                    <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                        <i class="fa-solid fa-star" style="color: brown;"></i>
-                        <i class="fa-solid fa-star" style="color: brown;"></i>
-                        <i class="fa-solid fa-star" style="color: brown;"></i>
-                        <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                    </div>
-
-                    <div class="nom-carte">Poulet Pané</div>
-
-
-                    <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-
-                    <div class="prixBoutton-carte">
-                        <div class="prix-carte"><span class="prix">12000</span>FCFA</div>
-                        <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                    </div> 
-                    
-                    
-
-            </div>        
-
-    </div>
-
-</div>
-
-
-<div class="col-md-6 col-sm-12 col-lg-4 ">
-
-    <div class="carte-plats">
-
-        <div class="carte-image"><img src="image/chocolat.jpg" alt="image de la framboise au chocolat "></div>
-
-
-       <div class="carte-corps">
-
-               <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star-half" style="color: brown;"></i>
-               </div>
-
-               <div class="nom-carte">Framboise au Chocolat</div>
-
-
-               <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-
-               <div class="prixBoutton-carte">
-                   <div class="prix-carte"><span class="prix">5000</span>FCFA</div>
-                   <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-               </div> 
-               
-               
-
-       </div>        
-
-</div>
-
-</div>
-
-
-<div class="col-md-6 col-sm-12 col-lg-4">
-
-    <div class="carte-plats">
-
-        <div class="carte-image"><img src="image/biscuit.jpg" alt="image du Savour de biscuit"></div>
-
-
-       <div class="carte-corps">
-
-               <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star" style="color: brown;"></i>
-                   <i class="fa-solid fa-star-half" style="color: brown;"></i>
-               </div>
-
-               <div class="nom-carte">Savour de biscuit</div>
-
-
-               <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-
-               <div class="prixBoutton-carte">
-                   <div class="prix-carte"><span class="prix">500</span>FCFA</div>
-                   <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-               </div> 
-               
-               
-
-       </div>        
-
-</div>
-
-</div>
-
-
-</div>
-
-<div class="row gx-3 gy-3 range_plats  mt-3 shadow-lg">
-
-    <div class="col-md-6 col-sm-12 col-lg-4 bg-tertiary ">
-    
-        <div class="carte-plats">
-    
-                 <div class="carte-image"><img src="image/HamBurger.jpg" alt="image du Hambouger "></div>
-    
-    
-                <div class="carte-corps">
-    
-                        <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                            <i class="fa-solid fa-star" style="color: brown;"></i>
-                            <i class="fa-solid fa-star" style="color: brown;"></i>
-                            <i class="fa-solid fa-star" style="color: brown;"></i>
-                            <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                        </div>
-    
-                        <div class="nom-carte">Hambouger</div>
-    
-    
-                        <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-    
-                        <div class="prixBoutton-carte">
-                            <div class="prix-carte"><span class="prix">3500</span>FCFA</div>
-                            <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                        </div> 
-                        
-                        
-    
-                </div>        
-    
-        </div>
-    
-    </div>
-    
-    
-    <div class="col-md-6 col-sm-12 col-lg-4 ">
-    
-        <div class="carte-plats">
-    
-            <div class="carte-image"><a href="platPouletDg.html"><img src="image/Pouletdg.jpg" alt="image du Poulet DG "></a></div>
-    
-    
-           <div class="carte-corps">
-    
-                   <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                   </div>
-    
-                   <div class="nom-carte">Poulet DG</div>
-    
-    
-                   <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-    
-                   <div class="prixBoutton-carte">
-                       <div class="prix-carte"><span class="prix">10000</span>FCFA</div>
-                       <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                   </div> 
-                   
-                   
-    
-           </div>        
-    
-    </div>
-    
-    </div>
-    
-    
-    <div class="col-md-6 col-sm-12 col-lg-4">
-    
-        <div class="carte-plats">
-    
-            <div class="carte-image"><img src="image/fritepomme.jpg" alt="image des Frites de Pommes"></div>
-    
-    
-           <div class="carte-corps">
-    
-                   <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star" style="color: brown;"></i>
-                       <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                   </div>
-    
-                   <div class="nom-carte">Frites de Pommes</div>
-    
-    
-                   <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-    
-                   <div class="prixBoutton-carte">
-                       <div class="prix-carte"><span class="prix">2000</span>FCFA</div>
-                       <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                   </div> 
-                   
-                   
-    
-           </div>        
-    
-    </div>
-    
-    </div>
-    
-    
-    </div>
-
-
-
-    <div class="row d-flex align-item-center " id="pourquoi">
-
-        <div class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5">
-            <p class="h1">  Pourquoi Nous Choisir?</p>
-        </div>
-    
-    </div>
-
-
-    <div class="row">
-
-        <div class="col-lg-4">
-            <div class="image-pourquoi">
-                <img src="image/tofabout.jpg" alt="poulet montrant la raison du choix">
-            </div>
-        </div>
-
-        <div class="col-lg-1 offset-lg-1"></div>
-
-        <div class="col-lg-6">
-
-            <div class="col-lg-12">
-                <p class="h1 d-flex align-item-center justify-content-center mb-2" >Meilleur Repas du Pays</p>
-            </div>
-
-            <div class="col-lg-12 mb-2">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur unde voluptatem voluptatum saepe quidem sint corporis aliquid fugiat, libero nam animi maiores molestias laborum inventore illum atque distinctio quaerat quisquam placeat facilis? Quisquam iure commodi repudiandae ipsum? Tempora inventore ab facilis modi architecto harum magni dolore voluptatibus a dolor commodi id reiciendis aspernatur, adipisci aut beatae assumenda veritatis voluptas obcaecati expedita perferendis? Iste saepe harum impedit consectetur ex ipsa officiis, consequatur corporis optio voluptate quo voluptatum quibusdam neque in consequuntur vitae ea cumque! Accusamus nam fugit provident? Assumenda quidem dicta nihil! Ab aspernatur, nam itaque hic minima quasi provident. Maxime iure quo assumenda? Consequatur obcaecati, cum, amet quasi similique repellendus minus deleniti quo numquam, ipsa incidunt nam dolores omnis asperiores provident! Soluta, veniam explicabo!
-                </p>
-            </div>
-
-            <div class="col-lg-12">
-<div class="row g-2">
-                
-            <div class="col-lg-4 col-md-12"> 
-                  
-                    <button type="button" class="btn btn-secondary w-100"><i class="fa-solid fa-truck-fast"></i>Livraison Gratuite</button><br>
-</div>
-
-<div class="col-lg-4 col-md-12">          
-                    <button type="button" class="btn btn-secondary w-100"><i class="fa-solid fa-dollar-sign"></i>Payement</button><br>
-                  </div>
-
-                  <div class="col-lg-4 col-md-12 ">                    
-                    <button type="button" class="btn btn-secondary w-100 "><i class="fa-solid fa-headphones"></i>Services 24/7j</button> 
-                  </div>
-               
-               
-            </div>
-            <div class="row mb-3">
-                <div class="col-12">
-                    <button type="button" class="btn btn-warning w-100 mt-3">Learn +</button>
-
-                </div>
-            </div>
-            </div>
-           
-
-        </div>
-
-    </div>
-
-
-<div class="row mb-3" >
-
-    <div class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5" id="menus">
-        <p class="h1">  Menus du Jour Special</p>
-    </div>
-
-
-    <div class="row gx-3 gy-3 range_plats  mt-3 shadow-lg">
-
-        <div class="col-md-6 col-sm-12 col-lg-4 ">
-        
-            <div class="carte-plats">
-        
-                     <div class="carte-image"><img src="image/pommepile.jpg" alt="image des pomme pile "></div>
-        
-        
-                    <div class="carte-corps">
-        
-                            <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                                <i class="fa-solid fa-star" style="color: brown;"></i>
-                                <i class="fa-solid fa-star" style="color: brown;"></i>
-                                <i class="fa-solid fa-star" style="color: brown;"></i>
-                                <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                            </div>
-        
-                            <div class="nom-carte">Pomme Pilé</div>
-        
-        
-                            <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-        
-                            <div class="prixBoutton-carte">
-                                <div class="prix-carte"><span class="prix">2000</span>FCFA</div>
-                                <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                            </div> 
-                            
-                            
-        
-                    </div>        
-        
-            </div>
-        
-        </div>
-        
-        
-        <div class="col-md-6 col-sm-12 col-lg-4 ">
-        
-            <div class="carte-plats">
-        
-                <div class="carte-image"><img src="image/malaxé.jpg" alt="image de la malaxé "></div>
-        
-        
-               <div class="carte-corps">
-        
-                       <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                       </div>
-        
-                       <div class="nom-carte">Banane Malaxé</div>
-        
-        
-                       <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-        
-                       <div class="prixBoutton-carte">
-                           <div class="prix-carte"><span class="prix">5000</span>FCFA</div>
-                           <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                       </div> 
-                       
-                       
-        
-               </div>        
-        
-        </div>
-        
-        </div>
-        
-        
-        <div class="col-md-6 col-sm-12 col-lg-4">
-        
-            <div class="carte-plats">
-        
-                <div class="carte-image"><img src="image/saucejaune.jpg" alt="image de la sauce jaune"></div>
-        
-        
-               <div class="carte-corps">
-        
-                       <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star" style="color: brown;"></i>
-                           <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                       </div>
-        
-                       <div class="nom-carte">Taro Sauce Jaune</div>
-        
-        
-                       <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-        
-                       <div class="prixBoutton-carte">
-                           <div class="prix-carte"><span class="prix">5000</span>FCFA</div>
-                           <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                       </div> 
-                       
-                       
-        
-               </div>        
-        
-        </div>
-        
-        </div>
-        
-        
-        </div>
-
-        <div class="row gx-3 gy-3 range_plats  mt-3 shadow-lg">
-
-            <div class="col-md-6 col-sm-12 col-lg-4 ">
-            
-                <div class="carte-plats">
-            
-                         <div class="carte-image"><img src="image/kwui.jpg" alt="image du nkwuiii "></div>
-            
-            
-                        <div class="carte-corps">
-            
-                                <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                                    <i class="fa-solid fa-star" style="color: brown;"></i>
-                                    <i class="fa-solid fa-star" style="color: brown;"></i>
-                                    <i class="fa-solid fa-star" style="color: brown;"></i>
-                                    <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                                </div>
-            
-                                <div class="nom-carte">Couscous Nkwuii</div>
-            
-            
-                                <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-            
-                                <div class="prixBoutton-carte">
-                                    <div class="prix-carte"><span class="prix">3500</span>FCFA</div>
-                                    <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                                </div> 
-                                
-                                
-            
-                        </div>        
-            
-                </div>
-            
-            </div>
-            
-            
-            <div class="col-md-6 col-sm-12 col-lg-4 ">
-            
-                <div class="carte-plats">
-            
-                    <div class="carte-image"><img src="image/couscousLegumes.jfif" alt="image du menus couscous legume"></div>
-            
-            
-                   <div class="carte-corps">
-            
-                           <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                           </div>
-            
-                           <div class="nom-carte">Couscous Legumes</div>
-            
-            
-                           <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-            
-                           <div class="prixBoutton-carte">
-                               <div class="prix-carte"><span class="prix">10000</span>FCFA</div>
-                               <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                           </div> 
-                           
-                           
-            
-                   </div>        
-            
-            </div>
-            
-            </div>
-            
-            
-            <div class="col-md-6 col-sm-12 col-lg-4">
-            
-                <div class="carte-plats">
-            
-                    <div class="carte-image"><img src="image/okok.jpg" alt="image de l'okock"></div>
-            
-            
-                   <div class="carte-corps">
-            
-                           <div class="etoiles-carte"><i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star" style="color: brown;"></i>
-                               <i class="fa-solid fa-star-half" style="color: brown;"></i>
-                           </div>
-            
-                           <div class="nom-carte">L'Okock Manioc</div>
-            
-            
-                           <div class="text-carte">Lorem ipsum dolor sit amet consectetur adipisicing elit. re dolorum, porro est maxime. Esse.</div>
-            
-                           <div class="prixBoutton-carte">
-                               <div class="prix-carte"><span class="prix">2000</span>FCFA</div>
-                               <div class="boutton-carte"> <button class="bg-primary add_remove">Add to Cart</button> </div>
-                           </div> 
-                           
-                           
-            
-                   </div>        
-            
-            </div>
-            
-            </div>
-            
-            
-            </div>    
-
-</div>
-
-
-<div class="row">
-
-
-    <div class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5" id="commandes">
-        <p class="h1">  Commande Maintenant Rapidement et Gratuitement</p>
-    </div>
-
-
-</div>
-
-<div class="row bg-light d-flex justify-content-center shadow-lg p-3">
-
-
-
-    <div class="col-12  justify-content-center messageEnregistrement">
-        <p>
-        Commande enregistrée avec success Mr/Mlle <span id="nomClient"></span>
-        </p>
-    </div>
-
-    
-
-    
-
-
-
-
-
-    <form class="row g-3 d-flex justify-content-between needs-validation" action="" novalidate>
-      
-      
-      <div class="col-md-6 col-sm-12">
-        <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Entrez votre nom..." required>
-        <div class="invalid-feedback">
-          Ce champ est obligatoire 
-        </div>
-      </div>
-
-
-      <div class="col-md-6 col-sm-12">
-        <input type="tel" class="form-control" id="validationCustom02" value="" required placeholder="Votre numero de telephone">
-        <div class="invalid-feedback">
-          Ce champ est obligatoire
-        </div>
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <input type="text" class="form-control" id="validationCustom03" value="" placeholder="Entrez le nom de la nourriture" required>
-        <div class="invalid-feedback">
-          Ce champ est obligatoire 
-        </div>
-      </div>
-
-      
-      <div class="col-md-6 col-sm-12">
-        <input type="text" class="form-control" id="validationCustom04" value="" required placeholder="Autre nourriture...">
-        <div class="invalid-feedback">
-          Ce champ est obligatoire
-        </div>
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <input type="number" class="form-control" id="validationCustom05" value="" placeholder="Entrez le nombre de commande(s)" required>
-        <div class="invalid-feedback">
-          Ce champ est obligatoire 
-        </div>
-      </div>
-
-      
-      <div class="col-md-6 col-sm-12">
-        <input type="datetime-local" class="form-control" id="validationCustom06" value="" required>
-        <div class="invalid-feedback">
-          Ce champ est obligatoire
-        </div>
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <textarea class="form-control" name="" id="validationCustom07" cols="10" rows="3" placeholder="Votre adresse" required></textarea>
-        <div class="invalid-feedback">
-          Ce champ est obligatoire
-        </div>
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <textarea class="form-control" name="" id="validationCustom08" cols="10" rows="3" placeholder="Description sur la commande" required></textarea>
-        <div class="invalid-feedback">
-          Ce champ est obligatoire
-        </div>
-      </div>
-     
-      
-
-
-      <div class="col-12">
-        <button class="btn btn-success w-100 " type="submit">Commander</button>
-      </div>
-    </form>
-
-
-
-
-
-
-</div>
-
-<div class="row">
-
-    <div class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5" id="about">
-        <p class="h1">  A Propos De Nous</p>
-    </div>
-
-</div>
-
-<div class="row mb-5">
-
-
-    <div class="col-lg-6 col-md-6 col-sm-12">
-        <label for="couleur">Changer la COULEUR du text</label> <br>
-        <input class="w-100" type="color" name="couleur" id="couleur">
-
-    </div>
-
-
-    <div class="col-lg-6 col-md-6 col-sm-12">
-        <label for="taille">Changer la TAILLE du text : <span id="tail">16</span>px</label> <br>
-        <input  class="w-100" type="range" name="taille" id="taille" step="1" min="1" max="100" value="16">
-
-    </div>
-
-    <div class="col-12">
-
-
-
-        <div class="accordion accordion-flush " id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed text-light  rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Lorem
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body mb-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quaerat. Quo quam officia ab labore atque aut, minima impedit ad porro. Quia saepe maiores laudantium!</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button class="accordion-button collapsed text-light rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Lorem
-                  </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse " aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body mb-3">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quaerat. Quo quam officia ab labore atque aut, minima impedit ad porro. Quia saepe maiores laudantium!</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed text-light rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Lorem
-                  </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse " aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body mb-3">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quaerat. Quo quam officia ab labore atque aut, minima impedit ad porro. Quia saepe maiores laudantium!</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                  <button class="accordion-button collapsed text-light rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    Lorem
-                  </button>
-                </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse " aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body mb-3">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quaerat. Quo quam officia ab labore atque aut, minima impedit ad porro. Quia saepe maiores laudantium!</p>
-                  </div>
-                </div>
-              </div>
-        
-            
-          </div>
-
-
-    </div>
-
-
-
-</div>
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-    <div class="container-fluid text-light p-3">
-        <div class="row d-flex bg-dark">
-            <div class="col-6">copyright  &copy; 2024 AGORA TECH CENTER</div>
-            <div class="col-6 d-flex justify-content-end align-item-center ">
-                
-                <i class="fa-brands fa-facebook ms-1"></i>
-                <i class="fa-brands fa-twitter ms-1"></i>
-                <i class="fa-brands fa-youtube ms-1"></i>
-            </div>
-        
-        </div>
-
-    </div>
-
-    
-
-          <!-- LE CHARIOT DU BAS -->
-
-
-    <div class="container">
-
-        <div class="nav-cart-bas">
-            <i class="fa-solid fa-cart-plus" style="height: 40px; color: rgb(114, 113, 113);"></i>
-            <span id="cart-number-item-bas">0</span>
-          </div>
-
-    </div>
-
-
-
-            <!-- LA CARTE CONTENANT LE NOMBRE DE DE MENUS CHOISIS -->
-    
-            <section class="carte">
-<section class="carte-tete">
-  <p>Le nombre de commandes dans la plateforme</p>
-  <button id="fermeurCarte">&times;</button>
-</section>
-
-<p id="nombreCommande">0</p>
-
-            </section>
-
-
-<div id="overlayIndex" class="">
-
-</div>
-
-<div class="ecartIndex"></div>
-
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="js/index.js"></script>
-
-</body>
+			<div
+				class="offcanvas offcanvas-start"
+				tabindex="-1"
+				id="offcanvasExample"
+				aria-labelledby="offcanvasExampleLabel"
+			>
+				<div class="offcanvas-header">
+					<button
+						type="button"
+						class="btn-close text-reset ms-auto"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0 two align-item-center">
+						<li class="nav-item resp me-5 fs-5 active">
+							<a class="nav-link" aria-current="page" href="#">Accueil</a>
+						</li>
+						<li class="nav-item resp me-5 fs-5">
+							<a class="nav-link" href="#plats">Plats</a>
+						</li>
+						<li class="nav-item resp me-5 fs-5">
+							<a class="nav-link" href="#pourquoi">Pourquoi</a>
+						</li>
+						<li class="nav-item resp me-5 fs-5">
+							<a class="nav-link" href="#menus">Menus</a>
+						</li>
+						<li class="nav-item resp me-5 fs-5">
+							<a class="nav-link" href="#commandes">Commandes</a>
+						</li>
+						<li class="nav-item resp me-5 fs-5">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- CARROUSSELLE -->
+
+		<div
+			id="carouselExampleDark"
+			class="carousel carousel-light slide"
+			data-bs-ride="carousel"
+		>
+			<div class="carousel-indicators">
+				<button
+					type="button"
+					data-bs-target="#carouselExampleDark"
+					data-bs-slide-to="0"
+					class="active"
+					aria-current="true"
+					aria-label="Slide 1"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleDark"
+					data-bs-slide-to="1"
+					aria-label="Slide 2"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleDark"
+					data-bs-slide-to="2"
+					aria-label="Slide 3"
+				></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="10000">
+					<img
+						src="image/poulet.jpg"
+						class="d-block w-100"
+						alt="image-plats"
+						loading="lazy"
+					/>
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="fs-1 text-uppercase">Nos Plats Speciaux</h5>
+						<p class="my-1">POULET & FRITES</p>
+						<p>
+							<a
+								href="#"
+								role="button"
+								aria-label="buy plat"
+								class="btn btn-success mt-3"
+								>Commande Maintenant</a
+							>
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img
+						src="image/pizza.jpg"
+						class="d-block w-100"
+						alt="image-plats"
+						loading="lazy"
+					/>
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="fs-1 text-uppercase">Nos Plats Speciaux</h5>
+						<p class="my-1">PIZZA CHAUDE</p>
+						<p>
+							<a
+								href="#"
+								role="button"
+								aria-label="buy plat"
+								class="btn btn-success mt-3"
+								>Commande Maintenant</a
+							>
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="image/nouille.jpg"
+						class="d-block w-100"
+						alt=" image-plats"
+						loading="lazy"
+					/>
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="fs-1 text-uppercase">Nos Plats Speciaux</h5>
+						<p class="my-1">NOUILLES EPICEES</p>
+						<p>
+							<a
+								href="#"
+								role="button"
+								aria-label="buy plat"
+								class="btn btn-success mt-3"
+								>Commande Maintenant</a
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+			<button
+				class="carousel-control-prev"
+				type="button"
+				data-bs-target="#carouselExampleDark"
+				data-bs-slide="prev"
+			>
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button
+				class="carousel-control-next"
+				type="button"
+				data-bs-target="#carouselExampleDark"
+				data-bs-slide="next"
+			>
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<!-- LES PLATS SOUS CARTES ET COMMANDABLE -->
+
+		<div class="container">
+			<div class="row">
+				<div
+					class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5"
+				>
+					<p class="h1" id="plats">PLATS POPULAIRES</p>
+				</div>
+			</div>
+
+			<div class="row gx-3 gy-3 range_plats shadow-lg">
+				<div class="col-md-6 col-sm-12 col-lg-4">
+					<div class="carte-plats">
+						<div class="carte-image">
+							<img src="image/pouletpane.jpg" alt="image du poulet pané " />
+						</div>
+
+						<div class="carte-corps">
+							<div class="etoiles-carte">
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star-half" style="color: brown"></i>
+							</div>
+
+							<div class="nom-carte">Poulet Pané</div>
+
+							<div class="text-carte">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+								dolorum, porro est maxime. Esse.
+							</div>
+
+							<div class="prixBoutton-carte">
+								<div class="prix-carte">
+									<span class="prix">12000</span>FCFA
+								</div>
+								<div class="boutton-carte">
+									<button class="bg-primary add_remove">Add to Cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-12 col-lg-4">
+					<div class="carte-plats">
+						<div class="carte-image">
+							<img
+								src="image/chocolat.jpg"
+								alt="image de la framboise au chocolat "
+							/>
+						</div>
+
+						<div class="carte-corps">
+							<div class="etoiles-carte">
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star-half" style="color: brown"></i>
+							</div>
+
+							<div class="nom-carte">Framboise au Chocolat</div>
+
+							<div class="text-carte">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+								dolorum, porro est maxime. Esse.
+							</div>
+
+							<div class="prixBoutton-carte">
+								<div class="prix-carte"><span class="prix">5000</span>FCFA</div>
+								<div class="boutton-carte">
+									<button class="bg-primary add_remove">Add to Cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-12 col-lg-4">
+					<div class="carte-plats">
+						<div class="carte-image">
+							<img src="image/biscuit.jpg" alt="image du Savour de biscuit" />
+						</div>
+
+						<div class="carte-corps">
+							<div class="etoiles-carte">
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star-half" style="color: brown"></i>
+							</div>
+
+							<div class="nom-carte">Savour de biscuit</div>
+
+							<div class="text-carte">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+								dolorum, porro est maxime. Esse.
+							</div>
+
+							<div class="prixBoutton-carte">
+								<div class="prix-carte"><span class="prix">500</span>FCFA</div>
+								<div class="boutton-carte">
+									<button class="bg-primary add_remove">Add to Cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row gx-3 gy-3 range_plats mt-3 shadow-lg">
+				<div class="col-md-6 col-sm-12 col-lg-4 bg-tertiary">
+					<div class="carte-plats">
+						<div class="carte-image">
+							<img src="image/HamBurger.jpg" alt="image du Hambouger " />
+						</div>
+
+						<div class="carte-corps">
+							<div class="etoiles-carte">
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star-half" style="color: brown"></i>
+							</div>
+
+							<div class="nom-carte">Hambouger</div>
+
+							<div class="text-carte">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+								dolorum, porro est maxime. Esse.
+							</div>
+
+							<div class="prixBoutton-carte">
+								<div class="prix-carte"><span class="prix">3500</span>FCFA</div>
+								<div class="boutton-carte">
+									<button class="bg-primary add_remove">Add to Cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-12 col-lg-4">
+					<div class="carte-plats">
+						<div class="carte-image">
+							<a href="platPouletDg.html"
+								><img src="image/Pouletdg.jpg" alt="image du Poulet DG "
+							/></a>
+						</div>
+
+						<div class="carte-corps">
+							<div class="etoiles-carte">
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star-half" style="color: brown"></i>
+							</div>
+
+							<div class="nom-carte">Poulet DG</div>
+
+							<div class="text-carte">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+								dolorum, porro est maxime. Esse.
+							</div>
+
+							<div class="prixBoutton-carte">
+								<div class="prix-carte">
+									<span class="prix">10000</span>FCFA
+								</div>
+								<div class="boutton-carte">
+									<button class="bg-primary add_remove">Add to Cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-12 col-lg-4">
+					<div class="carte-plats">
+						<div class="carte-image">
+							<img
+								src="image/fritepomme.jpg"
+								alt="image des Frites de Pommes"
+							/>
+						</div>
+
+						<div class="carte-corps">
+							<div class="etoiles-carte">
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star" style="color: brown"></i>
+								<i class="fa-solid fa-star-half" style="color: brown"></i>
+							</div>
+
+							<div class="nom-carte">Frites de Pommes</div>
+
+							<div class="text-carte">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+								dolorum, porro est maxime. Esse.
+							</div>
+
+							<div class="prixBoutton-carte">
+								<div class="prix-carte"><span class="prix">2000</span>FCFA</div>
+								<div class="boutton-carte">
+									<button class="bg-primary add_remove">Add to Cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row d-flex align-item-center" id="pourquoi">
+				<div
+					class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5"
+				>
+					<p class="h1">Pourquoi Nous Choisir?</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="image-pourquoi">
+						<img
+							src="image/tofabout.jpg"
+							alt="poulet montrant la raison du choix"
+						/>
+					</div>
+				</div>
+
+				<div class="col-lg-1 offset-lg-1"></div>
+
+				<div class="col-lg-6">
+					<div class="col-lg-12">
+						<p class="h1 d-flex align-item-center justify-content-center mb-2">
+							Meilleur Repas du Pays
+						</p>
+					</div>
+
+					<div class="col-lg-12 mb-2">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+							consectetur unde voluptatem voluptatum saepe quidem sint corporis
+							aliquid fugiat, libero nam animi maiores molestias laborum
+							inventore illum atque distinctio quaerat quisquam placeat facilis?
+							Quisquam iure commodi repudiandae ipsum? Tempora inventore ab
+							facilis modi architecto harum magni dolore voluptatibus a dolor
+							commodi id reiciendis aspernatur, adipisci aut beatae assumenda
+							veritatis voluptas obcaecati expedita perferendis? Iste saepe
+							harum impedit consectetur ex ipsa officiis, consequatur corporis
+							optio voluptate quo voluptatum quibusdam neque in consequuntur
+							vitae ea cumque! Accusamus nam fugit provident? Assumenda quidem
+							dicta nihil! Ab aspernatur, nam itaque hic minima quasi provident.
+							Maxime iure quo assumenda? Consequatur obcaecati, cum, amet quasi
+							similique repellendus minus deleniti quo numquam, ipsa incidunt
+							nam dolores omnis asperiores provident! Soluta, veniam explicabo!
+						</p>
+					</div>
+
+					<div class="col-lg-12">
+						<div class="row g-2">
+							<div class="col-lg-4 col-md-12">
+								<button type="button" class="btn btn-secondary w-100">
+									<i class="fa-solid fa-truck-fast"></i>Livraison Gratuite</button
+								><br />
+							</div>
+
+							<div class="col-lg-4 col-md-12">
+								<button type="button" class="btn btn-secondary w-100">
+									<i class="fa-solid fa-dollar-sign"></i>Payement</button
+								><br />
+							</div>
+
+							<div class="col-lg-4 col-md-12">
+								<button type="button" class="btn btn-secondary w-100">
+									<i class="fa-solid fa-headphones"></i>Services 24/7j
+								</button>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-12">
+								<button type="button" class="btn btn-warning w-100 mt-3">
+									Learn +
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div
+					class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5"
+					id="menus"
+				>
+					<p class="h1">Menus du Jour Special</p>
+				</div>
+
+				<div class="row gx-3 gy-3 range_plats mt-3 shadow-lg">
+					<div class="col-md-6 col-sm-12 col-lg-4">
+						<div class="carte-plats">
+							<div class="carte-image">
+								<img src="image/pommepile.jpg" alt="image des pomme pile " />
+							</div>
+
+							<div class="carte-corps">
+								<div class="etoiles-carte">
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star-half" style="color: brown"></i>
+								</div>
+
+								<div class="nom-carte">Pomme Pilé</div>
+
+								<div class="text-carte">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+									dolorum, porro est maxime. Esse.
+								</div>
+
+								<div class="prixBoutton-carte">
+									<div class="prix-carte">
+										<span class="prix">2000</span>FCFA
+									</div>
+									<div class="boutton-carte">
+										<button class="bg-primary add_remove">Add to Cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12 col-lg-4">
+						<div class="carte-plats">
+							<div class="carte-image">
+								<img src="image/malaxé.jpg" alt="image de la malaxé " />
+							</div>
+
+							<div class="carte-corps">
+								<div class="etoiles-carte">
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star-half" style="color: brown"></i>
+								</div>
+
+								<div class="nom-carte">Banane Malaxé</div>
+
+								<div class="text-carte">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+									dolorum, porro est maxime. Esse.
+								</div>
+
+								<div class="prixBoutton-carte">
+									<div class="prix-carte">
+										<span class="prix">5000</span>FCFA
+									</div>
+									<div class="boutton-carte">
+										<button class="bg-primary add_remove">Add to Cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12 col-lg-4">
+						<div class="carte-plats">
+							<div class="carte-image">
+								<img src="image/saucejaune.jpg" alt="image de la sauce jaune" />
+							</div>
+
+							<div class="carte-corps">
+								<div class="etoiles-carte">
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star-half" style="color: brown"></i>
+								</div>
+
+								<div class="nom-carte">Taro Sauce Jaune</div>
+
+								<div class="text-carte">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+									dolorum, porro est maxime. Esse.
+								</div>
+
+								<div class="prixBoutton-carte">
+									<div class="prix-carte">
+										<span class="prix">5000</span>FCFA
+									</div>
+									<div class="boutton-carte">
+										<button class="bg-primary add_remove">Add to Cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row gx-3 gy-3 range_plats mt-3 shadow-lg">
+					<div class="col-md-6 col-sm-12 col-lg-4">
+						<div class="carte-plats">
+							<div class="carte-image">
+								<img src="image/kwui.jpg" alt="image du nkwuiii " />
+							</div>
+
+							<div class="carte-corps">
+								<div class="etoiles-carte">
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star-half" style="color: brown"></i>
+								</div>
+
+								<div class="nom-carte">Couscous Nkwuii</div>
+
+								<div class="text-carte">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+									dolorum, porro est maxime. Esse.
+								</div>
+
+								<div class="prixBoutton-carte">
+									<div class="prix-carte">
+										<span class="prix">3500</span>FCFA
+									</div>
+									<div class="boutton-carte">
+										<button class="bg-primary add_remove">Add to Cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12 col-lg-4">
+						<div class="carte-plats">
+							<div class="carte-image">
+								<img
+									src="image/couscousLegumes.jfif"
+									alt="image du menus couscous legume"
+								/>
+							</div>
+
+							<div class="carte-corps">
+								<div class="etoiles-carte">
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star-half" style="color: brown"></i>
+								</div>
+
+								<div class="nom-carte">Couscous Legumes</div>
+
+								<div class="text-carte">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+									dolorum, porro est maxime. Esse.
+								</div>
+
+								<div class="prixBoutton-carte">
+									<div class="prix-carte">
+										<span class="prix">10000</span>FCFA
+									</div>
+									<div class="boutton-carte">
+										<button class="bg-primary add_remove">Add to Cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12 col-lg-4">
+						<div class="carte-plats">
+							<div class="carte-image">
+								<img src="image/okok.jpg" alt="image de l'okock" />
+							</div>
+
+							<div class="carte-corps">
+								<div class="etoiles-carte">
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star" style="color: brown"></i>
+									<i class="fa-solid fa-star-half" style="color: brown"></i>
+								</div>
+
+								<div class="nom-carte">L'Okock Manioc</div>
+
+								<div class="text-carte">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. re
+									dolorum, porro est maxime. Esse.
+								</div>
+
+								<div class="prixBoutton-carte">
+									<div class="prix-carte">
+										<span class="prix">2000</span>FCFA
+									</div>
+									<div class="boutton-carte">
+										<button class="bg-primary add_remove">Add to Cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div
+					class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5"
+					id="commandes"
+				>
+					<p class="h1">Commande Maintenant Rapidement et Gratuitement</p>
+				</div>
+			</div>
+
+			<div class="row bg-light d-flex justify-content-center shadow-lg p-3">
+				<div class="col-12 justify-content-center messageEnregistrement">
+					<p>
+						Commande enregistrée avec success Mr/Mlle
+						<span id="nomClient"></span>
+					</p>
+				</div>
+
+				<form
+					class="row g-3 d-flex justify-content-between needs-validation"
+					action=""
+					novalidate
+				>
+					<div class="col-md-6 col-sm-12">
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustom01"
+							value=""
+							placeholder="Entrez votre nom..."
+							required
+						/>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						<input
+							type="tel"
+							class="form-control"
+							id="validationCustom02"
+							value=""
+							required
+							placeholder="Votre numero de telephone"
+						/>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustom03"
+							value=""
+							placeholder="Entrez le nom de la nourriture"
+							required
+						/>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustom04"
+							value=""
+							required
+							placeholder="Autre nourriture..."
+						/>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						<input
+							type="number"
+							class="form-control"
+							id="validationCustom05"
+							value=""
+							placeholder="Entrez le nombre de commande(s)"
+							required
+						/>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						<input
+							type="datetime-local"
+							class="form-control"
+							id="validationCustom06"
+							value=""
+							required
+						/>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						<textarea
+							class="form-control"
+							name=""
+							id="validationCustom07"
+							cols="10"
+							rows="3"
+							placeholder="Votre adresse"
+							required
+						></textarea>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12">
+						<textarea
+							class="form-control"
+							name=""
+							id="validationCustom08"
+							cols="10"
+							rows="3"
+							placeholder="Description sur la commande"
+							required
+						></textarea>
+						<div class="invalid-feedback">Ce champ est obligatoire</div>
+					</div>
+
+					<div class="col-12">
+						<button class="btn btn-success w-100" type="submit">
+							Commander
+						</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="row">
+				<div
+					class="col-12 d-flex align-item-center justify-content-center mt-5 mb-5"
+					id="about"
+				>
+					<p class="h1">A Propos De Nous</p>
+				</div>
+			</div>
+
+			<div class="row mb-5">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<label for="couleur">Changer la COULEUR du text</label> <br />
+					<input class="w-100" type="color" name="couleur" id="couleur" />
+				</div>
+
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<label for="taille"
+						>Changer la TAILLE du text : <span id="tail">16</span>px</label
+					>
+					<br />
+					<input
+						class="w-100"
+						type="range"
+						name="taille"
+						id="taille"
+						step="1"
+						min="1"
+						max="100"
+						value="16"
+					/>
+				</div>
+
+				<div class="col-12">
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+								<button
+									class="accordion-button collapsed text-light rounded"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseOne"
+									aria-expanded="false"
+									aria-controls="flush-collapseOne"
+								>
+									Lorem
+								</button>
+							</h2>
+							<div
+								id="flush-collapseOne"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingOne"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body mb-3">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Soluta, quaerat. Quo quam officia ab labore atque aut,
+										minima impedit ad porro. Quia saepe maiores laudantium!
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingTwo">
+								<button
+									class="accordion-button collapsed text-light rounded"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseTwo"
+									aria-expanded="false"
+									aria-controls="flush-collapseTwo"
+								>
+									Lorem
+								</button>
+							</h2>
+							<div
+								id="flush-collapseTwo"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingTwo"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body mb-3">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Soluta, quaerat. Quo quam officia ab labore atque aut,
+										minima impedit ad porro. Quia saepe maiores laudantium!
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingThree">
+								<button
+									class="accordion-button collapsed text-light rounded"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseThree"
+									aria-expanded="false"
+									aria-controls="flush-collapseThree"
+								>
+									Lorem
+								</button>
+							</h2>
+							<div
+								id="flush-collapseThree"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingThree"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body mb-3">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Soluta, quaerat. Quo quam officia ab labore atque aut,
+										minima impedit ad porro. Quia saepe maiores laudantium!
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingFour">
+								<button
+									class="accordion-button collapsed text-light rounded"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseFour"
+									aria-expanded="false"
+									aria-controls="flush-collapseFour"
+								>
+									Lorem
+								</button>
+							</h2>
+							<div
+								id="flush-collapseFour"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingFour"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body mb-3">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Soluta, quaerat. Quo quam officia ab labore atque aut,
+										minima impedit ad porro. Quia saepe maiores laudantium!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid text-light p-3">
+			<div class="row d-flex bg-dark">
+				<div class="col-6">copyright &copy; 2024 AGORA TECH CENTER</div>
+				<div class="col-6 d-flex justify-content-end align-item-center">
+					<i class="fa-brands fa-facebook ms-1"></i>
+					<i class="fa-brands fa-twitter ms-1"></i>
+					<i class="fa-brands fa-youtube ms-1"></i>
+				</div>
+			</div>
+		</div>
+
+		<!-- LE CHARIOT DU BAS -->
+
+		<div class="container">
+			<div class="nav-cart-bas">
+				<i
+					class="fa-solid fa-cart-plus"
+					style="height: 40px; color: rgb(114, 113, 113)"
+				></i>
+				<span id="cart-number-item-bas">0</span>
+			</div>
+		</div>
+
+		<!-- LA CARTE CONTENANT LE NOMBRE DE DE MENUS CHOISIS -->
+
+		<section class="carte">
+			<section class="carte-tete">
+				<p>Le nombre de commandes dans la plateforme</p>
+				<button id="fermeurCarte">&times;</button>
+			</section>
+
+			<p id="nombreCommande">0</p>
+		</section>
+
+		<div id="overlayIndex" class=""></div>
+
+		<div class="ecartIndex"></div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/all.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
 </html>
